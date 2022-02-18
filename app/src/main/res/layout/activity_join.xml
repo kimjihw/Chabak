@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <ImageView
+        android:id="@+id/iv_join_back"
+        android:layout_width="8dp"
+        android:layout_height="17dp"
+        android:layout_marginStart="24dp"
+        android:src="@drawable/back_arrow"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_join"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tv_join" />
+
+    <TextView
+        android:id="@+id/tv_join"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:text="@string/join_signup"
+        android:textColor="@color/text_222"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@id/tv_join">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:text="@string/join_name"
+                android:textColor="@color/text_222"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/join_name"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/input_id"
+                android:backgroundTint="@color/bg_f4"
+                android:drawablePadding="24dp"
+                android:hint="@string/join_name"
+                android:paddingStart="16dp"
+                android:textColorHint="@color/text_bbb"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="@string/join_email"
+                android:textColor="@color/text_222"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/join_id"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/input_id"
+                android:backgroundTint="@color/bg_f4"
+                android:drawablePadding="24dp"
+                android:hint="@string/join_email_hint"
+                android:inputType="textEmailAddress"
+                android:paddingStart="16dp"
+                android:textColorHint="@color/text_bbb"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="@string/join_pw"
+                android:textColor="@color/text_222"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/join_pw"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/input_id"
+                android:backgroundTint="@color/bg_f4"
+                android:hint="@string/join_pw"
+                android:inputType="textPassword"
+                android:paddingStart="16dp"
+                android:textColorHint="@color/text_bbb"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="@string/check_pw"
+                android:textColor="@color/text_222"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/join_check_pw"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/input_id"
+                android:backgroundTint="@color/bg_f4"
+                android:hint="@string/check_pw"
+                android:inputType="textPassword"
+                android:paddingStart="16dp"
+                android:textColorHint="@color/text_bbb"
+                android:textSize="14sp" />
+
+            <!-- 비밀번호 오류메세지 -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/iv_pw_error"
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:layout_marginTop="5dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/pw_error"
+                    android:visibility="gone"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_pw_error"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:text="@string/pw_error"
+                    android:textColor="@color/error"
+                    android:textSize="12sp"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="@+id/iv_pw_error"
+                    app:layout_constraintStart_toEndOf="@+id/iv_pw_error"
+                    app:layout_constraintTop_toTopOf="@+id/iv_pw_error" />
+
+                <!-- 비밀번호 일치 성공시 -->
+                <TextView
+                    android:id="@+id/tv_pw_success"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="6dp"
+                    android:layout_marginTop="3dp"
+                    android:text="@string/pw_success"
+                    android:textColor="@color/success"
+                    android:textSize="12sp"
+                    android:visibility="gone"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="@string/phone"
+                android:textColor="@color/text_222"
+                android:textSize="14sp" />
+
+            <!-- 휴대폰 인증 -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <!-- 번호입력 -->
+                <EditText
+                    android:id="@+id/et_phone_num"
+                    android:layout_width="240dp"
+                    android:layout_height="48dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_weight="2"
+                    android:background="@drawable/input_id"
+                    android:backgroundTint="@color/bg_f4"
+                    android:hint="@string/phone_num"
+                    android:inputType="number"
+                    android:paddingStart="16dp"
+                    android:textColorHint="@color/text_bbb"
+                    android:textSize="14sp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/iv_phone_num_btn"
+                    android:layout_width="110dp"
+                    android:layout_height="48dp"
+                    android:background="@drawable/oauth"
+                    android:text="인증번호 전송"
+                    app:layout_constraintBottom_toBottomOf="@+id/et_phone_num"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/et_phone_num" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/phone_num_btn"
+                    android:textColor="@color/text_555"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/iv_phone_num_btn"
+                    app:layout_constraintEnd_toEndOf="@+id/iv_phone_num_btn"
+                    app:layout_constraintStart_toStartOf="@+id/iv_phone_num_btn"
+                    app:layout_constraintTop_toTopOf="@+id/iv_phone_num_btn" />
+
+                <!-- 인증번호 입력 -->
+                <EditText
+                    android:id="@+id/et_code_num"
+                    android:layout_width="240dp"
+                    android:layout_height="48dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_weight="2"
+                    android:background="@drawable/input_id"
+                    android:backgroundTint="@color/bg_f4"
+                    android:hint="@string/code_num"
+                    android:inputType="number"
+                    android:paddingStart="16dp"
+                    android:textColorHint="@color/text_bbb"
+                    android:textSize="14sp"
+                    android:visibility="gone"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/et_phone_num" />
+
+                <ImageView
+                    android:id="@+id/iv_code_num_btn"
+                    android:layout_width="110dp"
+                    android:layout_height="48dp"
+                    android:background="@drawable/oauth"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="@+id/et_code_num"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/et_code_num" />
+
+                <TextView
+                    android:id="@+id/tv_code_num_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/code_num_btn"
+                    android:textColor="@color/text_555"
+                    android:textSize="14sp"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="@+id/iv_code_num_btn"
+                    app:layout_constraintEnd_toEndOf="@+id/iv_code_num_btn"
+                    app:layout_constraintStart_toStartOf="@+id/iv_code_num_btn"
+                    app:layout_constraintTop_toTopOf="@+id/iv_code_num_btn" />
+                <!-- 인증번호 입력 끝 -->
+
+                <ImageView
+                    android:id="@+id/iv_phone_error"
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:layout_marginTop="5dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/pw_error"
+                    android:visibility="gone"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/et_code_num" />
+
+                <TextView
+                    android:id="@+id/tv_phone_error"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:text="@string/phone_error"
+                    android:textColor="@color/error"
+                    android:textSize="12sp"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="@+id/iv_phone_error"
+                    app:layout_constraintStart_toEndOf="@+id/iv_phone_error"
+                    app:layout_constraintTop_toTopOf="@+id/iv_phone_error" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <Button
+                android:id="@+id/join_btn"
+                style="@style/Medium_text"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/input_id"
+                android:backgroundTint="@color/main_blue"
+                android:text="@string/join"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                app:layout_constraintTop_toBottomOf="@id/iv_phone_error" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

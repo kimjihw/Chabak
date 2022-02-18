@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/iv_rank_number"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="24dp"
+        android:background="@drawable/oauth_rank"
+        android:backgroundTint="@color/main_yellow"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_rank_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="2dp"
+        android:text="1"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_rank_number"
+        app:layout_constraintEnd_toEndOf="@+id/iv_rank_number"
+        app:layout_constraintStart_toStartOf="@+id/iv_rank_number"
+        app:layout_constraintTop_toTopOf="@+id/iv_rank_number" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="12dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="@id/iv_rank_number"
+        app:layout_constraintStart_toEndOf="@id/iv_rank_number"
+        app:layout_constraintTop_toTopOf="@id/iv_rank_number">
+
+        <TextView
+            android:id="@+id/tv_rank_name"
+            style="@style/Medium_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:lineSpacingExtra="0.dp"
+            android:text="구시포해수욕장구시포해수욕장"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_rank_location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="전북 고창군 상하면 자룡리"
+            android:textColor="@color/text_555"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="@id/tv_rank_name"
+            app:layout_constraintTop_toBottomOf="@id/tv_rank_name" />
+
+    </LinearLayout>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_rank_img_background"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="9dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="8dp"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/iv_rank_img"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="@drawable/oauth_rank"
+            android:outlineProvider="none"
+            android:scaleType="centerCrop"
+            android:src="@drawable/rank_img_1" />
+
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,125 @@
+<resources>
+    <string name="app_name">My Application</string>
+
+    <!--  main  -->
+    <string name="total_search">검색어를 입력하세요.</string>
+
+    <!--Login-->
+    <string name="login_main_text">Welcome to Chabak</string>
+    <string name="enter_join">회원가입</string>
+    <string name="login_find_id">아이디찾기</string>
+    <string name="login_find_pw">비밀번호 찾기</string>
+    <string name="enter_id">이메일</string>
+    <string name="enter_pw">비밀번호</string>
+    <string name="OAuth">간편 로그인</string>
+    <string name="logo">차박지추천 앱</string>
+    <string name="kakao_login">카카오로 로그인</string>
+    <string name="google_login">구글로 로그인</string>
+    <string name="login_join">계정이 없으세요?</string>
+    <string name="login_error">아이디 혹은 비밀번호가 맞지 않습니다. 확인 후 다시 입력해주시기 바랍니다.</string>
+    <string name="login_error_ok">확인</string>
+    <string name="login_join_new">가입하기</string>
+    <string name="kakao_app_key">629bcbed9f698446a64088c677ef69cd</string>
+
+    <!--  join  -->
+    <string name="SignUp">회원가입</string>
+    <string name="join_name">이름</string>
+    <string name="join_email">이메일</string>
+    <string name="join_email_hint">이메일@직접입력</string>
+    <string name="join_pw">비밀번호</string>
+    <string name="check_pw">비밀번호 확인</string>
+    <string name="pw_error">비밀번호가 일치하지 않습니다.</string>
+    <string name="pw_success">비밀번호가 일치합니다.</string>
+
+    <string name="phone">휴대폰 인증</string>
+    <string name="phone_num">- 제외 번호 입력</string>
+    <string name="phone_num_btn">인증번호 전송</string>
+    <string name="code_num">번호 입력</string>
+    <string name="code_num_btn">확인</string>
+    <string name="phone_error">인증번호가 일치하지 않습니다.</string>
+
+    <string name="email_error">이메일 형식이 맞지 않습니다.</string>
+    <string name="passwd_error">숫자,문자,특수문자 중 2가지를 포함하여 8자이상 15자이하로 작성하여 주세요.</string>
+    <string name="passwd_check_error">패스워드가 일치하지 않습니다.</string>
+
+    <string name="phone_num_check">인증번호 보내기</string>
+    <string name="check_num">인증번호</string>
+    <string name="join">가입하기</string>
+    <string name="join_signup">회원가입</string>
+    <string name="join_success">회원가입이\n완료되었습니다.</string>
+    <string name="join_success_text">로그인 후 나만의 차박지도를 이용하실 수 있어요.</string>
+    <string name="join_success_btn">로그인 하러가기</string>
+
+    <!--  find  -->
+    <string name="find_top">아이디/비밀번호 찾기</string>
+    <string name="find_id">아이디 찾기</string>
+    <string name="find_pw">비밀번호 찾기</string>
+    <string name="find_btn">확인</string>
+    <string name="find_id_text">고객님의 정보와 일치하는 아이디입니다.</string>
+    <string name="find_id_login">로그인</string>
+
+    <string name="find_pw_save">저장</string>
+    <string name="find_pw_top">비밀번호 변경</string>
+    <string name="find_pw_edit">비밀번호</string>
+    <string name="find_pw_edit_check">비밀번호 확인</string>
+    <string name="find_pw_edit_cancel">취소</string>
+
+
+    <!-- main  -->
+    <string name="alarm">알림</string>
+    <string name="search">검색</string>
+    <string name="main_search">장소 검색</string>
+    <string name="main_rank">차박지 랭킹</string>
+    <string name="main_post">차박지 포스트</string>
+    <string name="main_close">가까운 차박지</string>
+    <string name="main_closer_location">내위치</string>
+
+    <!--  map  -->
+    <string name="map_search">장소 검색</string>
+    <string name="content_cnt">주변 차박지</string>
+
+    <!-- item_radius_place  -->
+    <string name="radius_place_name">장소 이름</string>
+    <string name="radius_place_distance">거리</string>
+
+    <!--  home  -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!--  place  -->
+    <string name="review_cnt">리뷰 </string>
+
+    <!--  TotalPost  -->
+    <string name="background_text">여행을 공유해주세요</string>
+    <string name="background_text2">포스트 및 리뷰를 적어 당신의 여행을 공유해주세요.</string>
+
+    <!--  Comment  -->
+    <string name="write_comment">댓글 작성하기</string>
+    <string name="comment_hint">업주와 다른 사용자들을 위하여 리뷰를 남겨주세요.</string>
+    <string name="comment_cancle">취소</string>
+    <string name="comment_enter">등록하기</string>
+    <string name="comment_warning">비방글은 신고 접수 시 삭제됩니다.</string>
+    <string name="comment_cnt">댓글</string>
+    <string name="report">신고</string>
+
+    <!--  detailPost  -->
+    <string name="detail_post">포스트</string>
+    <string name="detail_post_tag">태그</string>
+
+    <!--  map_detail  -->
+    <string name="picture">사진</string>
+    <string name="todo_review">리뷰하기</string>
+
+    <!--  write_post  -->
+    <string name="write_post">포스트 작성</string>
+    <string name="register_post">등록</string>
+    <string name="post_title">제목</string>
+    <string name="write_post_content">본문 내용을 작성해주세요.</string>
+    <string name="write_post_tag">쉼표로 태그를 구분할 수 있습니다.</string>
+    <string name="upload_picture">+ 사진 첨부</string>
+
+    <!-- MyPage  -->
+    <string name="goto_user_profile">내 정보</string>
+    <string name="goto_user_bookmark">북마크</string>
+
+    <string name="nothing">아무것도 없습니다.</string>
+</resources>

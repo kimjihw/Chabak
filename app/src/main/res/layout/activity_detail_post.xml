@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:overScrollMode="never">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/detail_post_main_cl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/back_arrow_img"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_margin="16dp"
+                android:background="@drawable/back_arrow"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/detail_post_report_tv"
+                style="@style/Medium_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="24dp"
+                android:text="@string/report"
+                android:textColor="@color/text_bbb"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="@+id/back_arrow_img"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/back_arrow_img" />
+
+            <TextView
+                android:id="@+id/detail_post_title_tv"
+                style="@style/Medium_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="48dp"
+                android:text="타이틀"
+                android:textColor="@color/text_222"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/back_arrow_img" />
+
+            <TextView
+                android:id="@+id/detail_post_writer_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:text="writer"
+                android:textColor="@color/text_555"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="@id/detail_post_title_tv"
+                app:layout_constraintTop_toBottomOf="@id/detail_post_title_tv" />
+
+            <TextView
+                android:id="@+id/detail_post_date_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="24dp"
+                android:text="날짜"
+                android:textColor="@color/text_bbb"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@+id/detail_post_writer_tv"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/detail_post_writer_tv" />
+
+            <TextView
+                android:id="@+id/detail_post_content_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="내용"
+                android:textColor="@color/text_222"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="@+id/detail_post_title_tv"
+                app:layout_constraintTop_toBottomOf="@id/detail_post_writer_tv" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/post_detail_background_cv"
+                android:layout_width="0dp"
+                android:layout_height="250dp"
+                android:layout_marginTop="12dp"
+                android:scaleType="fitXY"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="0dp"
+                app:layout_constraintEnd_toEndOf="@+id/detail_post_date_tv"
+                app:layout_constraintStart_toStartOf="@+id/detail_post_title_tv"
+                app:layout_constraintTop_toBottomOf="@id/detail_post_content_tv">
+
+                <ImageView
+                    android:id="@+id/post_detail_img"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitXY" />
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/detail_post_tag_tv"
+                style="@style/Medium_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/detail_post_tag"
+                android:textColor="@color/text_222"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="@+id/detail_post_title_tv"
+                app:layout_constraintTop_toBottomOf="@id/post_detail_background_cv" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/post_detail_tag_rv"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_marginTop="16dp"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="@+id/post_detail_background_cv"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/detail_post_tag_tv"
+                app:layout_constraintTop_toBottomOf="@id/detail_post_tag_tv"
+                tools:listitem="@layout/map_detail_tag_item" />
+
+            <TextView
+                android:id="@+id/post_place_review_cnt_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="20dp"
+                android:text="댓글 수"
+                app:layout_constraintStart_toEndOf="@id/detail_post_comment_img"
+                app:layout_constraintTop_toBottomOf="@id/post_detail_tag_rv" />
+
+            <ImageView
+                android:id="@+id/detail_post_comment_img"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/speechbubble"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/post_detail_tag_rv" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

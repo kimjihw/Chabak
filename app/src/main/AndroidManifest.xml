@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.myapplication">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:name=".config.ApplicationClass"
+        android:allowBackup="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.MyApplication"
+        android:usesCleartextTraffic="true"
+        tools:targetApi="m">
+        <activity
+            android:name=".post.detail.comment.WritePostCommentActivity"
+            android:exported="false" />
+        <activity
+            android:name=".map.detail.review.ReviewActivity"
+            android:exported="false" />
+        <activity
+            android:name=".map.detail.review.MapReviewActivity"
+            android:exported="false"
+            tools:ignore="Instantiatable" />
+        <activity
+            android:name=".join.JoinFinishActivity"
+            android:exported="false" />
+        <activity
+            android:name=".find.FindPwEditActivity"
+            android:exported="false" />
+        <activity
+            android:name=".post.write.WriteActivity"
+            android:exported="false" />
+        <activity
+            android:name=".comment.CommentActivity"
+            android:exported="false" />
+        <activity
+            android:name=".find.FindActivity"
+            android:exported="false" />
+        <activity
+            android:name=".post.detail.DetailPostActivity"
+            android:exported="false" />
+        <activity
+            android:name=".splash.SplashActivity"
+            android:exported="true"
+            android:theme="@style/FullScreenTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="com.naver.maps.map.CLIENT_ID"
+            android:value="iuhba1eepq" />
+
+        <activity
+            android:name=".join.JoinActivity"
+            android:exported="true"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".login.LoginActivity"
+            android:exported="true"
+            android:windowSoftInputMode="adjustPan"
+            tools:ignore="IntentFilterExportedReceiver" />
+        <activity
+            android:name=".main.MainActivity"
+            android:exported="true" />
+        <activity
+            android:name=".config.BaseActivity"
+            android:exported="true"
+            tools:ignore="Instantiatable" />
+    </application>
+
+</manifest>
